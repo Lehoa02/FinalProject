@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Webpage</title>
-<style>
-  /* CSS styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  h1 {
-    color: #333;
-  }
-  #message {
-    font-size: 18px;
-    color: #007bff;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Combined Webpage</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      font-family: system-ui;
+      background: pink;
+      color: white;
+      text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-<!-- HTML content -->
-<h1>ANA`S WEBSITE! One more change, double check</h1>
-<p id="message">This message is updated using JavaScript.</p>
+  <h1>This is Anasatsiia's webpage!</h1>
+  <button id="colorChangeBtn">Change Text Color</button>
 
-<script>
-  // JavaScript code
-  document.addEventListener("DOMContentLoaded", function() {
-    // Update message content
-    document.getElementById("message").textContent = "JavaScript is working correctly?!";
-  });
-</script>
+  <script>
+    document.getElementById("colorChangeBtn").addEventListener("click", function() {
+      var h1Element = document.querySelector("h1");
+      var currentColor = h1Element.style.color;
+      var newColor = (currentColor === "blue") ? "purple" : "blue";
+      h1Element.style.color = newColor;
+    });
+  </script>
 </body>
 </html>
