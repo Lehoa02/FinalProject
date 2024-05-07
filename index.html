@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Webpage</title>
+<style>
+  /* CSS styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+  }
+  #message {
+    font-size: 18px;
+    color: #007bff;
+  }
+</style>
+</head>
+<body>
+<!-- HTML content -->
+<h1>Welcome to Anastasiia`s Webpage!</h1>
+<p id="message">This message is updated using JavaScript.</p>
+
+<script>
+  // JavaScript code
+  document.addEventListener("DOMContentLoaded", function() {
+    // Update message content
+    document.getElementById("message").textContent = "JavaScript is working, Is it?!";
+  });
+</script>
+</body>
+</html>
